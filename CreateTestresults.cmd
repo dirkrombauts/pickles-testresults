@@ -9,7 +9,7 @@ pause
 
 "%~dp0\TestHarness\packages\NUnit.Console.3.0.0\tools\nunit3-console.exe" "%~dp0\TestHarness\nunit3\bin\Debug\nunit3Harness.dll" /result="%~dp0\results-example-nunit3.xml"
 
-"%~dp0\TestHarness\packages\SpecRun.Runner.1.2.0\tools\specrun.exe" run default.srprofile "/baseFolder:%~dp0\TestHarness\SpecRun\bin\Debug" /log:specrun.log /report:"%~dp0\results-example-specrun.html"
+"%~dp0\TestHarness\packages\SpecRun.Runner.1.3.0\tools\specrun.exe" run default.srprofile "/baseFolder:%~dp0\TestHarness\SpecRun\bin\Debug" /log:specrun.log /report:"%~dp0\results-example-specrun.html"
 
 "%~dp0\TestHarness\packagesNonNuget\xunit.runner\xunit.console.clr4.exe" "%~dp0\TestHarness\xunit\bin\Debug\xunitHarness.dll" /xml "%~dp0\results-example-xunit.xml"
 
