@@ -17,7 +17,7 @@ namespace Pickles.TestHarness.xunit
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class AdditionFeature : Xunit.IClassFixture<AdditionFeature.FixtureData>, System.IDisposable
+    public partial class AdditionFeature : Xunit.IUseFixture<AdditionFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -32,7 +32,7 @@ namespace Pickles.TestHarness.xunit
         
         public static void FeatureSetup()
         {
-            testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
+            testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Addition", "  In order to avoid silly mistakes\r\n  As a math idiot\r\n  I want to be told the su" +
                     "m of two numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
@@ -80,12 +80,12 @@ namespace Pickles.TestHarness.xunit
             this.ScenarioTearDown();
         }
         
-        [Xunit.TheoryAttribute()]
+        [Xunit.Extensions.TheoryAttribute()]
         [Xunit.TraitAttribute("FeatureTitle", "Addition")]
         [Xunit.TraitAttribute("Description", "Adding several numbers")]
         [Xunit.TraitAttribute("Category", "tag2")]
-        [Xunit.InlineDataAttribute("60", "70", "130", "260", new string[0])]
-        [Xunit.InlineDataAttribute("40", "50", "90", "180", new string[0])]
+        [Xunit.Extensions.InlineDataAttribute("60", "70", "130", "260", new string[0])]
+        [Xunit.Extensions.InlineDataAttribute("40", "50", "90", "180", new string[0])]
         public virtual void AddingSeveralNumbers(string firstNumber, string secondNumber, string thirdNumber, string result, string[] exampleTags)
         {
             string[] @__tags = new string[] {
